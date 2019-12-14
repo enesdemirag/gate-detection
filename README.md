@@ -48,9 +48,9 @@ sudo python3 setup.py install
 #### 6. Run script for train and test
 
 ```
-python3 generate-tfrecord.py --csv_input=data/train-labels.csv --output_path=data/train.record --image_dir=images/
+python3 generate-tfrecord.py --csv_input=data/train-labels.csv --output_path=data/train.record --image_dir=images/train/
 ```
 
 ```
-python3 generate-tfrecord.py --csv_input=data/test-labels.csv --output_path=data/test.record --image_dir=images/
+python3 generate-tfrecord.py --csv_input=data/test-labels.csv --output_path=data/test.record --image_dir=images/test/
 ```
