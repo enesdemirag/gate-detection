@@ -10,6 +10,8 @@ Our team works on an Autonomous Underwater Vehicle to prepare for [Singapore AUV
 
 Check out our [website](http://auv.itu.edu.tr/) and [repo](https://gitlab.com/itu-auv).
 
+> Tested on Ubuntu 18.04
+
 ## Steps
 
 #### 1. Install [tensorflow](https://www.tensorflow.org/install)
