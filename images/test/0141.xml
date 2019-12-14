@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>0141.png</filename>
+	<path>/home/enes/Desktop/dataset/0141.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1366</width>
+		<height>768</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>gate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>112</xmin>
+			<ymin>181</ymin>
+			<xmax>761</xmax>
+			<ymax>764</ymax>
+		</bndbox>
+	</object>
+</annotation>
