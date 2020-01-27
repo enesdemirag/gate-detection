@@ -1,10 +1,10 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)
 
-# Underwater Object (Gate) Detection using TensorFlow
+# Underwater Object (Gate) Detection using Pytorch
 
 ## Overview
 
-This repository created to train a model and detect an underwater object using tensorflow API.
+This repository created to train a model and detect an underwater object using pytorch API with the help of [Detecto](https://github.com/alankbi/detecto/).
 
 Our team works on an Autonomous Underwater Vehicle to prepare for [Singapore AUV Challange](https://sauvc.org/) and the [RoboSub'20](https://robonation.org/programs/robosub/).
 
@@ -14,12 +14,10 @@ Check out our [website](http://auv.itu.edu.tr/) and [repo](https://gitlab.com/it
 
 ## Getting Ready
 
-#### 1. Install [tensorflow](https://www.tensorflow.org/install)
+#### 1. Install [Detecto](https://detecto.readthedocs.io/en/latest/usage/quickstart.html#installation)
 
 ```
-sudo apt update
-sudo apt install python3-dev python3-pip
-pip3 install --user --upgrade tensorflow
+pip3 install detecto
 ```
 
 #### 2. Get your images for dataset.
@@ -30,39 +28,23 @@ pip3 install --user --upgrade tensorflow
 pip3 install labelImg
 ```
 
-#### 4. Run [xml2csv](xml2csv.py) script to convert xml files.
+#### 4. Run below codes to convert xml files.
 
 ```
-python3 xml2csv.py
-```
-
-#### 5. Install tensorflow model
-
-```
-git clone https://github.com/tensorflow/models.git
-sudo apt-get install protobuf-compiler python-pil python-lxml
-cd models/
-protoc object_detection/protos/*.proto --python_out=.
-export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
-sudo python3 setup.py install
-```
-
-#### 6. Run script for train and test
-
-```
-python3 generate-tfrecord.py --csv_input=data/train-labels.csv --output_path=data/train.record --image_dir=images/train/
-```
-
-```
-python3 generate-tfrecord.py --csv_input=data/test-labels.csv --output_path=data/test.record --image_dir=images/test/
+from detecto.utils import xml_to_csv
+xml_to_csv('path_to_xml_folder/', 'labels.csv')
 ```
 
 ## Training
 
 #### Local
 
-- Train on your PC, run [this](training.sh) script.
+- Train on your PC, run [this](training.py) script.
 
 #### Server
 
 - Train on a powerful machine, run [colab notebook](training.ipynb) on Google Colab.
+
+## Testing
+
+- Test using openCV, run [this](testing.py) script.
