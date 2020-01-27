@@ -10,7 +10,9 @@ Our team works on an Autonomous Underwater Vehicle to prepare for [Singapore AUV
 
 Check out our [website](http://auv.itu.edu.tr/) and [repo](https://gitlab.com/itu-auv).
 
-## Steps
+> Tested on Ubuntu 18.04
+
+## Getting Ready
 
 #### 1. Install [tensorflow](https://www.tensorflow.org/install)
 
@@ -54,3 +56,13 @@ python3 generate-tfrecord.py --csv_input=data/train-labels.csv --output_path=dat
 ```
 python3 generate-tfrecord.py --csv_input=data/test-labels.csv --output_path=data/test.record --image_dir=images/test/
 ```
+
+## Training
+
+#### Local
+
+- Train on your PC, run [this](training.sh) script.
+
+#### Server
+
+- Train on a powerful machine, run [colab notebook](training.ipynb) on Google Colab.
