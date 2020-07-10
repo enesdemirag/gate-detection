@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository created to train a model and detect an underwater object using pytorch API with the help of [Detecto](https://github.com/alankbi/detecto/).
+This repository created to train a model (Pre-trained Faster R-CNN ResNet-50 FPN Model)and detect an underwater object using pytorch API with the help of [Detecto](https://github.com/alankbi/detecto/).
 
 See works with other frameworks: [tensorflow](https://github.com/enesdemirag/gate-detection/tree/tensorflow), [openCV](https://github.com/enesdemirag/gate-detection/tree/openCV). 
 
